@@ -1,0 +1,29 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    <div class="content-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        <div class="media-body">
+          <h2 class="account-heading">Welcome, {{ user.username }}</h2>
+          <p class="text-secondary">Email: {{ user.email }}</p>
+          <p class="text-secondary">Bio: {{ user.profile.bio }}</p>
+          <p class="text-secondary">Location: {{ user.profile.location }}</p>
+        </div>
+      </div>
+      <!-- User Update Form and Profile Update Form Code Available Here-->
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}  
+            <fieldset class="form-group">
+              <legend class="border-bottom mb-4">Profile Info</legend>
+              {{ u_form | crispy }}
+              {{ p_form | crispy }}
+            </fieldset>
+            <div class="form-group">
+              <button class="btn btn-outline-info" type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}  
