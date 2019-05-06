@@ -1,18 +1,12 @@
-This django project is about Twitting Post. 
+This is Tweet App which is a fully-fledge Django Application. 
+This project shows the flows and implementation of application protocol in order to make things up and running. 
 
-Django Project tells how flow works in django. 
+Features like -
+Authentication
+Forms 
+DataBase
+User Profile 
+User Account 
+etc 
 
-Features like :
-Login
-Signup 
-Handling DataBase
-Using Mixins
-Class-based generic views
-Writing Django-templating language
-How Signals work
-Fully-fledge Profile system with update
-virtual environment
-
-etc....
-
-
+Have well implemented in order to go for production stage. 
